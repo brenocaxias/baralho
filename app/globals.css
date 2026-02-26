@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  /* Cores da Ester */
+  --color-ester-dark: #2f384b;
+  --color-ester-gold: #c4b383;
+  --color-ester-blue-dark: #3c6295;
+  --color-ester-blue-light: #74b3cf;
+  --color-ester-accent: #4884be;
+
+  /* Mapeamento das Fontes para o Tailwind entender */
+  --font-cinzel: var(--font-cinzel);
+  --font-cormorant: var(--font-cormorant);
+}
+
+/* RESET E APLICAÇÃO GLOBAL */
+:root {
+  --background: #2f384b;
+  --foreground: #f8fafc;
+}
+
+body {
+  background-color: #2f384b;
+  color: #f8fafc;
+  /* FORÇA a fonte Cormorant no corpo todo */
+  font-family: var(--font-cormorant), serif !important;
+  line-height: 1.6;
+}
+
+/* FORÇA a fonte Cinzel em todos os títulos */
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-cinzel), serif !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Ajuste para o texto formatado via dangerouslySetInnerHTML */
+strong {
+  font-family: var(--font-cinzel), serif !important;
+}
