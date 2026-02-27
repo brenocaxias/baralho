@@ -1,22 +1,27 @@
-import { Cinzel, Cormorant_Garamond } from 'next/font/google';
-import './globals.css';
+import { Cinzel, Cormorant_Garamond } from "next/font/google";
+import "./globals.css";
 
-const cinzel = Cinzel({ 
-  subsets: ['latin'],
-  variable: '--font-cinzel',
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  variable: "--font-cinzel",
+  display: "swap",
 });
 
-const cormorant = Cormorant_Garamond({ 
-  subsets: ['latin'],
-  weight: ['300', '400', '600'],
-  variable: '--font-cormorant',
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-cormorant",
+  display: "swap",
 });
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    // IMPORTANTE: as variáveis precisam estar no HTML ou BODY
     <html lang="pt-br" className={`${cinzel.variable} ${cormorant.variable}`}>
-      <body className="antialiased">
+      <body className="antialiased font-body">
         {children}
       </body>
     </html>
