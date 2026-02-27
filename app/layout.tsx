@@ -1,3 +1,4 @@
+import type { Metadata } from "next"; // Importação necessária
 import { Cinzel, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 
@@ -13,6 +14,19 @@ const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
   display: "swap",
 });
+
+// ADICIONE ISSO AQUI:
+export const metadata: Metadata = {
+  title: "Oráculo de Ester",
+  description: "Consultoria mística e baralho cigano",
+  manifest: "/manifest.json",
+  themeColor: "#2f384b",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Oráculo de Ester",
+  },
+};
 
 export default function RootLayout({
   children,
