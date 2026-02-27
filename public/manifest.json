@@ -1,0 +1,20 @@
+{
+  "name": "Oráculo de Ester",
+  "short_name": "Oráculo",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2f384b",
+  "theme_color": "#c4b383",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
